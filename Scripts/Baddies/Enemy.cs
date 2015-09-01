@@ -74,11 +74,16 @@ public class Enemy : MovingObject {
 			break;
 	
 		case "TowardsPlayer":
+			turnDelay = 0.8f;
 			moveFunction = TowardsPlayer;
 			break;
 			
 		case "MoveShootMove":
 			moveFunction = MoveShootMove;
+			break;
+		
+		case "StraightLine":
+			moveFunction = StraightLine;
 			break;
 		}
 	}

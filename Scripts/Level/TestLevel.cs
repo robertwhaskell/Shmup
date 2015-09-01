@@ -17,7 +17,7 @@ public class TestLevel : LevelGen {
 
 	IEnumerator Waves () {
 		yield return new WaitForSeconds (1);
-		GameObject ship = (GameObject)placeBaddy(2, 1, 0, 0, new Vector2(0, 3), "MoveShootMove");
+		GameObject ship = (GameObject)placeBaddy(1, 1, 2.5f, -0.5f, new Vector2(-5, 3), "StraightLine");
 
 	}
 	

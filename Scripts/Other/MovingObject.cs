@@ -119,6 +119,10 @@ public class MovingObject : MonoBehaviour {
 	!!!!!!!!!!!!!!
 	 */
 
+	public void StraightLine(){
+		rb2D.velocity = new Vector2 (xSpeed, ySpeed);
+	}
+
 	public void LeftToRight(){
 		if (transform.position.x > (initialX + moveBoundary) || transform.position.x > 7.5){
 			goingRight = false;
@@ -193,7 +197,12 @@ public class MovingObject : MonoBehaviour {
 		}
 		
 	}
-	
+
+	public void setDestinationXY(float x, float y){
+		destinationX = x;
+		destinationY = y;
+	}
+
 	public void MoveShootMove() {
 		if (!inPosition) {
 			shotTimer = 0;

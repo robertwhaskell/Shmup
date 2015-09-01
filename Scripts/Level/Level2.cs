@@ -18,7 +18,7 @@ public class Level2 : LevelGen {
 		boss.GetComponent<Enemy> ().destinationY = 4;
 	}
 	
-	// Update is called once per frame
+	// Update is called once per frame sdkfhdsfdskl
 	void Update () {
 		
 	}

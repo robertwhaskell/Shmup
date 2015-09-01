@@ -43,6 +43,7 @@ public class PlayerLaser: MonoBehaviour {
 				}
 				if (firingTime >= fireMax) {
 					ShutDownCannon();
+
 				}
 			}
 		}

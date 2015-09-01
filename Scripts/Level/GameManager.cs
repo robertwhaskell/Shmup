@@ -66,6 +66,8 @@ public class GameManager : MonoBehaviour {
 
 	public List<GameObject> followerTypes;
 
+	public bool slowTime;
+
 	void Awake () {
 
 		if (instance == null) {
@@ -105,6 +107,13 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isALevel) {
+			if (Input.GetMouseButtonDown(1)){
+				slowTime = true;
+				Time.timeScale /= 5;
+			} else if (Input.GetMouseButtonUp(1)){
+				slowTime = false;
+				Time.timeScale *= 5;
+			}
 			if (levelOver) {
 				BeatLevel ();
 			} else {
